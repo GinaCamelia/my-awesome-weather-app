@@ -122,3 +122,5 @@ function getCurrentPosition(event) {
 
 let button = document.querySelector(".btn-success");
 button.addEventListener("click", getCurrentPosition);
+
+/*https://github.com/GinaCamelia/my-awesome-weather-app.git*/
