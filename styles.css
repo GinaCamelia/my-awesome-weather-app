@@ -63,10 +63,8 @@ body {
   display: block;
   text-align: center;
   color: #a21232;
-  margin-top: 45px;
-}
-.footer:hover {
-cursor: pointer;
+  margin-top: 35px;
+  font-size: 35px;
 }
 .link-github {
   color: #1a1831;
