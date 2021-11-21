@@ -47,3 +47,25 @@ body {
 .card-title {
   font-size: 50px;
 }
+.contact-details {
+  text-align: center;
+  margin: 20px;
+  font-size: 12px;
+  font-family: courier;
+}
+.email {
+  color: #a21232;
+  font-weight: bolder;
+}
+.instagram {
+  color: #a21232;
+  font-weight: bolder;
+}
+.footer {
+  display: block;
+  text-align: center;
+  color: #1a1831;
+  font-family: courier;
+  margin-top: 45px;
+  font-size: 20px;
+}
