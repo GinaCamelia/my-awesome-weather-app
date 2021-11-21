@@ -65,16 +65,16 @@ body {
   color: #1a1831;
   margin-top: 35px;
   font-size: 20px;
+  text-decoration: underline;
 }
 .link-github {
-  color: #1a1831;
+  color: #a21232;;
   text-decoration: none;
   display: block;
   text-align: center;
   margin-top: 10px;
 }
 .link-github:hover {
-  color: #a21232;
+  color: #1a1831;
   cursor: pointer;
-  text-decoration: underline;
 }
