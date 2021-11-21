@@ -65,8 +65,8 @@ body {
   color: #a21232;
   margin-top: 45px;
 }
-.name {
-  color: #1a1831;
+.footer:hover {
+cursor: pointer;
 }
 .link-github {
   color: #1a1831;
