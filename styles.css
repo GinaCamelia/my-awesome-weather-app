@@ -50,7 +50,6 @@ body {
 .contact-details {
   text-align: center;
   margin: 20px;
-  font-size: 12px;
 }
 .email {
   color: #a21232;
@@ -65,11 +64,15 @@ body {
   text-align: center;
   color: #1a1831;
   margin-top: 45px;
-  font-size: 20px;
 }
 .link-github {
   text-decoration: none;
   display: block;
   text-align: center;
   margin-top: 10px;
+}
+.link-github:hover {
+  color: #a21232;
+  cursor: pointer;
+  text-decoration: underline;
 }
