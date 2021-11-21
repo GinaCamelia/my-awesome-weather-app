@@ -67,7 +67,7 @@ body {
   margin-top: 45px;
   font-size: 20px;
 }
-a {
+.link-github {
   text-decoration: none;
   display: block;
   text-align: center;
