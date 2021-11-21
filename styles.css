@@ -1,0 +1,49 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+.form-control {
+  display: block;
+  margin: 0 auto;
+  max-width: 350px;
+}
+.btn-outline-info {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  left: 220px;
+  bottom: 38px;
+}
+.btn-success {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  left: 348px;
+  bottom: 76px;
+}
+.circle {
+  position: relative;
+  left: 75px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #0dcaf0;
+  border-radius: 100%;
+  padding: 20px;
+  max-width: 75%;
+}
+.square {
+  position: relative;
+  left: 75px;
+  display: inline-flex;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 10px;
+  border: 1px solid #0dcaf0;
+  border-radius: 25px;
+  max-width: 100%;
+}
+.card-title {
+  font-size: 50px;
+}
