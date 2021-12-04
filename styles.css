@@ -1,12 +1,12 @@
 body {
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  border: 1px solid #DADCE0;
 }
 .form-control {
   display: block;
   margin: 0 auto;
   max-width: 350px;
-  right: 100px;
   box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
 }
 .btn-outline-info {
