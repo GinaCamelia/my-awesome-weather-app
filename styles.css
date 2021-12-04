@@ -27,6 +27,7 @@ body {
   transition: all 200ms ease-in-out;
 }
 .btn-success {
+  text-decoration: none;
   display: block;
   margin: 0 auto;
   margin: 20px auto;
