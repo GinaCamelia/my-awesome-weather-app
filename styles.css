@@ -3,6 +3,7 @@ body {
   background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
 }
 .border {
+  max-width: 800px;
   border: 1px solid #D9D9D9;
 }
 .form-control {
