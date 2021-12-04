@@ -41,6 +41,9 @@ body {
   background-color: #fff;
   transition: all 200ms ease-in-out;
 }
+.display-input strong {
+  font-size: large;
+}
 .circle {
   position: relative;
   left: 75px;
