@@ -39,7 +39,6 @@ body {
 .btn-success:hover {
   color: #1a64d6;
   background-color: #fff;
-  cursor: pointer;
   transition: all 200ms ease-in-out;
 }
 .circle {
