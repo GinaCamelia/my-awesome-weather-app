@@ -4,6 +4,7 @@ body {
 }
 .border {
   max-width: 800px;
+  margin: 0 auto;
   border: 1px solid #D9D9D9;
 }
 .form-control {
