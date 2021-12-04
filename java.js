@@ -46,13 +46,13 @@ form.addEventListener("submit", displayCity);
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 48.2;
+  temperatureElement.innerHTML = Math.round(48.2);
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 9;
+  temperatureElement.innerHTML = 10;
 }
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
@@ -63,7 +63,7 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 function displayCity(event) {
   event.preventDefault();
-  // console.log("cenas");
+  // console.log("cenas");  
   let searchInput = document.querySelector("#search-text-input");
   if (searchInput.value) {
     let units = "metric";
