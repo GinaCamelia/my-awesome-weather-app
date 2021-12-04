@@ -5,7 +5,7 @@ body {
 .form-control {
   display: block;
   margin: 0 auto;
-  max-width: 350px;
+  max-width: 500px;
   box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
 }
 .btn-outline-info {
