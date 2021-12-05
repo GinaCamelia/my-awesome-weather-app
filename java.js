@@ -45,9 +45,9 @@ form.addEventListener("submit", displayCity);
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let fahrenheitTemperature = Math.round(10 * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = fahrenheitTemperature;
+  let fahrenheitTemperature = (10 * 9) / 5 + 32;
+  let temperatureElement = document.querySelector(".temp");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 
