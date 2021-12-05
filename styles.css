@@ -79,8 +79,7 @@ body {
   font-weight: bolder;
 }
 .link-github {
-  color: #a21232;;
-  text-decoration: underline;
+  text-decoration: none;
   display: block;
   text-align: center;
   margin-top: 10px;
