@@ -102,3 +102,10 @@ body {
   font-size: 20px;
   text-decoration: none;
 }
+.active {
+  color: #212529;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+}
