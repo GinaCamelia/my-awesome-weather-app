@@ -64,8 +64,6 @@ celsiusLink.addEventListener("click", convertToCelsius);
 function displayCity(event) {
   event.preventDefault();
   // console.log("cenas");  
-  let iconElement = document.querySelector("#icon");
-  iconElement.getAttribute = ("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   let searchInput = document.querySelector("#search-text-input");
   if (searchInput.value) {
     let units = "metric";
@@ -85,8 +83,8 @@ function displayWeather(response) {
   let temperatureElement = document.querySelector(".temp");
   temperatureElement.innerHTML = `${temperature}`;
 
-  /*let iconElement = document.querySelector("#icon");
-  iconElement.getAttribute = ("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);*/
+  let iconElement = document.querySelector("#icon");
+  iconElement.getAttribute = ("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
   let descriptionElement = document.querySelector(".description");
   descriptionElement.innerHTML = response.data.weather[0].main;
