@@ -43,6 +43,34 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", displayCity);
 
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-text-input");
+  displayCity(searchInput.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+displayCity("London");
+
+
+function displayCity(event) {
+  event.preventDefault(); 
+  let searchInput = document.querySelector("#search-text-input");
+  if (searchInput.value) {
+    let units = "metric";
+    let key = "baad171896e0c3b36f831a6990f30812";
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${key}&units=metric`;
+    axios.get(url).then(displayWeather);
+    } else {
+    searchInput.innerHTML = "";
+    alert("Enter a city");
+  }
+}
+
+
+
 function convertToFahrenheit(event) {
   event.preventDefault();
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
@@ -68,22 +96,6 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-
-function displayCity(event) {
-  event.preventDefault();
-  // console.log("cenas");  
-  let searchInput = document.querySelector("#search-text-input");
-  if (searchInput.value) {
-    let units = "metric";
-    let key = "baad171896e0c3b36f831a6990f30812";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${key}&units=metric`;
-    axios.get(url).then(displayWeather);
-    } else {
-    searchInput.innerHTML = "";
-    alert("Enter a city");
-  }
-}
-
 /*function displayCity(city) {
   if (city) {
     let units = "metric";
@@ -96,18 +108,6 @@ function displayCity(event) {
     alert("Enter a city");
   }
 }*/
-
-function handleSubmit(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#search-text-input");
-  displayCity(searchInput.value);
-}
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
-
-displayCity("London");
-
 
 function displayWeather(response) {
   console.log(response.data);
