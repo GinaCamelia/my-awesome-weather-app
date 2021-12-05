@@ -90,14 +90,6 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
-.footer {
-  display: block;
-  text-align: center;
-  color: #1a1831;
-  margin-top: 25px;
-  font-size: 20px;
-  text-decoration: none;
-}
 .active {
   color: #212529;
   cursor: default;
