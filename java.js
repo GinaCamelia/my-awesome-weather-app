@@ -45,7 +45,7 @@ form.addEventListener("submit", displayCity);
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let fahrenheitTemperature = (10 * 9) / 5 + 32;
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector(".temp");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
@@ -80,6 +80,8 @@ function displayCity(event) {
 
 function displayWeather(response) {
   console.log(response.data);
+
+  celsiusTemperature = response.data.main.temp;
 
   let temperature = `${Math.round(response.data.main.temp)}`;
   let temperatureElement = document.querySelector(".temp");
