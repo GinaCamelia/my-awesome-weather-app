@@ -1,6 +1,6 @@
 body {
   font-family: "Montserrat", sans-serif;
-  background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  background: radial-gradient(circle at 10% 20%, rgb(239, 246, 249) 0%, rgb(206, 239, 253) 90%);
 }
 .border {
   max-width: 800px;
