@@ -61,8 +61,6 @@ body {
   margin: 0 auto;
   padding: 20px;
   padding-bottom: 20px;
-  border: 1px solid #0dcaf0;
-  border-radius: 25px;
   max-width: 100%;
 }
 .card-title {
