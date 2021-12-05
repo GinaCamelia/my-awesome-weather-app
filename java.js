@@ -46,6 +46,8 @@ form.addEventListener("submit", displayCity);
 function convertToFahrenheit(event) {
   event.preventDefault();
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let temperatureElement = document.querySelector(".temp");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
@@ -53,6 +55,8 @@ function convertToFahrenheit(event) {
 
 function convertToCelsius(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector(".temp");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
