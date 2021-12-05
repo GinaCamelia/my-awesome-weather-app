@@ -108,6 +108,7 @@ form.addEventListener("submit", handleSubmit);
 
 displayCity("London");
 
+
 function displayWeather(response) {
   console.log(response.data);
 
