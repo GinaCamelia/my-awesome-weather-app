@@ -42,20 +42,7 @@ dateElement.innerHTML = `${day}, ${month} ${date}, ${year}; ${hours}:${minutes}`
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", displayCity);
 
-
-function handleSubmit(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#search-text-input");
-  displayCity(searchInput.value);
-}
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
-
-displayCity("London");
-
-
-function displayCity(event) {
+/*function displayCity(event) {
   event.preventDefault(); 
   let searchInput = document.querySelector("#search-text-input");
   if (searchInput.value) {
@@ -67,8 +54,30 @@ function displayCity(event) {
     searchInput.innerHTML = "";
     alert("Enter a city");
   }
+}*/
+
+function displayCity(city) {
+  if (city) {
+    let units = "metric";
+    let key = "baad171896e0c3b36f831a6990f30812";
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=${units}`;
+    axios.get(url).then(displayWeather);
+  } else {
+    let searchInput = document.querySelector("#search-text-input");
+    searchInput.innerHTML = "";
+    alert("Enter a city");
+  }
+}
+function handleSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-text-input");
+  displayCity(searchInput.value);
 }
 
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+displayCity("London");
 
 
 function convertToFahrenheit(event) {
@@ -96,18 +105,7 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-/*function displayCity(city) {
-  if (city) {
-    let units = "metric";
-    let key = "baad171896e0c3b36f831a6990f30812";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=${units}`;
-    axios.get(url).then(displayWeather);
-  } else {
-    let searchInput = document.querySelector("#search-text-input");
-    searchInput.innerHTML = "";
-    alert("Enter a city");
-  }
-}*/
+
 
 function displayWeather(response) {
   console.log(response.data);
