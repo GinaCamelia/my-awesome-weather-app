@@ -57,8 +57,8 @@ function convertToCelsius(event) {
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
+/*let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);*/
 
 
 function displayCity(event) {
