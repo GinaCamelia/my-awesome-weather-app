@@ -69,7 +69,7 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
 
-function displayCity(event) {
+/*function displayCity(event) {
   event.preventDefault();
   // console.log("cenas");  
   let searchInput = document.querySelector("#search-text-input");
@@ -79,6 +79,19 @@ function displayCity(event) {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${key}&units=metric`;
     axios.get(url).then(displayWeather);
     } else {
+    searchInput.innerHTML = "";
+    alert("Enter a city");
+  }
+}*/
+
+function displayCity(city) {
+  if (city) {
+    let units = "metric";
+    let key = "baad171896e0c3b36f831a6990f30812";
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=${units}`;
+    axios.get(url).then(displayWeather);
+  } else {
+    let searchInput = document.querySelector("#search-text-input");
     searchInput.innerHTML = "";
     alert("Enter a city");
   }
