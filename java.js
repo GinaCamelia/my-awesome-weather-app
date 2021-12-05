@@ -42,7 +42,7 @@ dateElement.innerHTML = `${day}, ${month} ${date}, ${year}; ${hours}:${minutes}`
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", displayCity);
 
-/*function displayCity(event) {
+function displayCity(event) {
   event.preventDefault(); 
   let searchInput = document.querySelector("#search-text-input");
   if (searchInput.value) {
@@ -54,9 +54,9 @@ form.addEventListener("submit", displayCity);
     searchInput.innerHTML = "";
     alert("Enter a city");
   }
-}*/
+}
 
-function displayCity(city) {
+/*function displayCity(city) {
   if (city) {
     let units = "metric";
     let key = "baad171896e0c3b36f831a6990f30812";
@@ -77,7 +77,7 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-displayCity("London");
+displayCity("London");*/
 
 
 function convertToFahrenheit(event) {
