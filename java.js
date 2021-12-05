@@ -83,6 +83,9 @@ function displayWeather(response) {
   let temperatureElement = document.querySelector(".temp");
   temperatureElement.innerHTML = `${temperature}`;
 
+  let iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = `${response.data.weather[0].icon}`; 
+
   let descriptionElement = document.querySelector(".description");
   descriptionElement.innerHTML = response.data.weather[0].main;
 
