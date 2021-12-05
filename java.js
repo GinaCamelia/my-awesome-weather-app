@@ -84,6 +84,17 @@ function displayCity(event) {
   }
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-text-input");
+  displayCity(searchInput.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+displayCity("London");
+
 function displayWeather(response) {
   console.log(response.data);
 
