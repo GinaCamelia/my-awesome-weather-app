@@ -84,7 +84,7 @@ function displayWeather(response) {
   temperatureElement.innerHTML = `${temperature}`;
 
   let iconElement = document.querySelector(".icon");
-  iconElement.innerHTML = `${response.data.weather[0].icon}`; 
+  iconElement.innerHTML = `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`; 
 
   let descriptionElement = document.querySelector(".description");
   descriptionElement.innerHTML = response.data.weather[0].main;
