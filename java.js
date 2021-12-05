@@ -69,7 +69,7 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
 
-/*function displayCity(event) {
+function displayCity(event) {
   event.preventDefault();
   // console.log("cenas");  
   let searchInput = document.querySelector("#search-text-input");
@@ -82,9 +82,9 @@ celsiusLink.addEventListener("click", convertToCelsius);
     searchInput.innerHTML = "";
     alert("Enter a city");
   }
-}*/
+}
 
-function displayCity(city) {
+/*function displayCity(city) {
   if (city) {
     let units = "metric";
     let key = "baad171896e0c3b36f831a6990f30812";
@@ -95,7 +95,7 @@ function displayCity(city) {
     searchInput.innerHTML = "";
     alert("Enter a city");
   }
-}
+}*/
 
 function handleSubmit(event) {
   event.preventDefault();
