@@ -43,22 +43,24 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", displayCity);
 
 
-/*function convertToFahrenheit(event) {
+function convertToFahrenheit(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(48.2);
+  let fahrenheitTemperature = Math.round(10 * 9) / 5 + 32;
+  let temperatureElement = document.querySelector(".description");
+  temperatureElement.innerHTML = fahrenheitTemperature;
 }
 
-function convertToCelsius(event) {
+
+/*function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = 10;
-}
+}*/
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-/*let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);*/
+//let celsiusLink = document.querySelector("#celsius-link");
+//celsiusLink.addEventListener("click", convertToCelsius);
 
 
 function displayCity(event) {
@@ -78,8 +80,6 @@ function displayCity(event) {
 
 function displayWeather(response) {
   console.log(response.data);
-
-  celsiusTemperature = response.data.main.temp
 
   let temperature = `${Math.round(response.data.main.temp)}`;
   let temperatureElement = document.querySelector(".temp");
