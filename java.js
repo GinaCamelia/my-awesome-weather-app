@@ -51,16 +51,18 @@ function convertToFahrenheit(event) {
 }
 
 
-/*function convertToCelsius(event) {
+function convertToCelsius(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 10;
-}*/
+  let temperatureElement = document.querySelector(".temp");
+  temperatureElement.innerHTML = celsiusTemperature;
+}
+
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-//let celsiusLink = document.querySelector("#celsius-link");
-//celsiusLink.addEventListener("click", convertToCelsius);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
 
 
 function displayCity(event) {
