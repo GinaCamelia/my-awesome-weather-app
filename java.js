@@ -39,23 +39,6 @@ let year = now.getFullYear();
 let dateElement = document.querySelector(".day");
 dateElement.innerHTML = `${day}, ${month} ${date}, ${year}; ${hours}:${minutes}`;
 
-/*let form = document.querySelector("#search-form");
-form.addEventListener("submit", displayCity);*/
-
-/*function displayCity(event) {
-  event.preventDefault(); 
-  let searchInput = document.querySelector("#search-text-input");
-  if (searchInput.value) {
-    let units = "metric";
-    let key = "baad171896e0c3b36f831a6990f30812";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${key}&units=metric`;
-    axios.get(url).then(displayWeather);
-    } else {
-    searchInput.innerHTML = "";
-    alert("Enter a city");
-  }
-}*/
-
 function displayCity(city) {
   if (city) {
     let units = "metric";
@@ -77,7 +60,7 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-displayCity("London");
+//displayCity("London");
 
 
 function convertToFahrenheit(event) {
