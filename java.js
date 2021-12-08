@@ -138,6 +138,6 @@ function getCurrentPosition(event) {
   navigator.geolocation.getCurrentPosition(currentLocation);
 }
 
-let button = document.querySelector(".btn-success");
+let button = document.querySelector(".btn-light");
 button.addEventListener("click", getCurrentPosition);
 
