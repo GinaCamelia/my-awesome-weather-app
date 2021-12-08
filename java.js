@@ -110,7 +110,7 @@ function displayWeather(response) {
 
   let wind = `${Math.round(response.data.wind.speed)}`;
   let showWind = document.querySelector(".wind");
-  showWind.innerHTML = `${wind}km/h`;
+  showWind.innerHTML = `${wind} km/h`;
 
   let humidity = `${Math.round(response.data.main.humidity)}`;
   let showHumidity = document.querySelector(".humidity");
