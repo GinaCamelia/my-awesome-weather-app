@@ -101,3 +101,15 @@ body {
   text-decoration: none;
   cursor: default;
 }
+.border-info {
+  text-align: center;
+}
+.card-header {
+font-size: 15px;  
+}
+.card-text {
+  font-size: 13px;
+}
+.temp-max {
+  opacity: 0.6;
+}
