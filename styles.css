@@ -82,16 +82,18 @@ body {
   font-weight: bolder;
 }
 .link {
+  font-weight: bolder;
   text-decoration: none;
   cursor: pointer;
+}
+.link:hover {
+  color: #a21232;
+  text-decoration: underline;
 }
 .link-github {
   display: block;
   text-align: center;
   margin-top: 10px;
-}
-.link-github:hover {
-  color: #1a1831;
 }
 .active {
   color: #212529;
