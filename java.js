@@ -39,6 +39,40 @@ let year = now.getFullYear();
 let dateElement = document.querySelector(".day");
 dateElement.innerHTML = `${day}, ${month} ${date}, ${year}; ${hours}:${minutes}`;
 
+
+
+function displayForecast() {
+let forecastElement = document.querySelector("#forecast");
+
+let forecastHTML = `<div class="row">`;
+let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+days.forEach(function(day) {
+  forecastHTML = forecastHTML + 
+  `
+  <div class="col">
+   <div class="card border-info mb-3" style="max-width: 18rem;">
+     <div class="card-header">${day}</div>
+        <div class="card-body">
+        <img src="https://openweathermap.org/img/wn/01d@2x.png"
+        alt=""
+        width="48"
+        />
+        <div class="card-text">
+          <span class="temp-min">11°</span>
+          <span class="temp-max">12°</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
+})
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+console.log(forecastHTML);
+}
+
+
+
 function displayCity(city) {
   if (city) {
     let units = "metric";
@@ -59,6 +93,8 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+displayForecast();
 
 
 function convertToFahrenheit(event) {
