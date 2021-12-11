@@ -3,10 +3,10 @@ body {
   background: radial-gradient(circle at 10% 20%, rgb(239, 246, 249) 0%, rgb(206, 239, 253) 90%);
 }
 .border {
-  max-width: 800px;
+  background: linear-gradient(76.5deg, rgb(129, 252, 255) 0.4%, rgb(255, 175, 207) 49.8%, rgb(255, 208, 153) 98.6%);
+  max-width: 700px;
   margin: 30px auto;
   border: 2px solid #D9D9D9;
-  background: #fff;
   border-radius: 16px;
   box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
   padding: 40px;
@@ -21,9 +21,8 @@ body {
   display: block;
   margin: 0 auto;
   position: relative;
-  left: 220px;
-  bottom: 38px;
-  box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
+  left: 216px;
+  bottom: 37px;
   transition: all 200ms ease-in-out;
 }
 .btn-light {
@@ -31,11 +30,10 @@ body {
   display: block;
   margin: 0 auto;
   position: relative;
-  right: 227px;
+  right: 223px;
   bottom: 75px;
   border: 1px solid #0CCAF0;
   border-radius: 5px;
-  box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
   transition: all 200ms ease-in-out;
 }
 .btn-light:hover {

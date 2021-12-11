@@ -17,6 +17,7 @@ let days = [
   "Fri",
   "Sat"
 ];
+
 let day = days[now.getDay()];
 let months = [
   "Jan",
@@ -40,12 +41,13 @@ let dateElement = document.querySelector(".day");
 dateElement.innerHTML = `${day}, ${month} ${date}, ${year}; ${hours}:${minutes}`;
 
 
-
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
 let forecastElement = document.querySelector("#forecast");
 
-let forecastHTML = `<div class="row">`;
 let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+
+let forecastHTML = `<div class="row">`;
 days.forEach(function(day) {
   forecastHTML = forecastHTML + 
   `
@@ -68,40 +70,18 @@ days.forEach(function(day) {
 })
 forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
-console.log(forecastHTML);
 }
 
 function getForecast(coordinates) {
-//console.log(coordinates);
+console.log(coordinates);
 let apiKey = "baad171896e0c3b36f831a6990f30812";
 let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?
-lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${metric}`;
+lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`;
 console.log(apiUrl);
 
-}
+axios.get(apiUrl).then(displayForecast);
 
-function displayCity(city) {
-  if (city) {
-    let units = "metric";
-    let key = "baad171896e0c3b36f831a6990f30812";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=${units}`;
-    axios.get(url).then(displayWeather);
-  } else {
-    let searchInput = document.querySelector("#search-text-input");
-    searchInput.innerHTML = "";
-    alert("Enter a city");
-  }
 }
-function handleSubmit(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#search-text-input");
-  displayCity(searchInput.value);
-}
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
-
-displayForecast();
 
 
 function displayWeather(response) {
@@ -139,6 +119,27 @@ function displayWeather(response) {
 getForecast(response.data.coord);
 }
 
+function displayCity(city) {
+  if (city) {
+    let units = "metric";
+    let key = "baad171896e0c3b36f831a6990f30812";
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=${units}`;
+    axios.get(url).then(displayWeather);
+  } else {
+    let searchInput = document.querySelector("#search-text-input");
+    searchInput.innerHTML = "";
+    alert("Enter a city");
+  }
+}
+function handleSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-text-input");
+  displayCity(searchInput.value);
+}
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+
 function convertToFahrenheit(event) {
   event.preventDefault();
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
@@ -148,7 +149,6 @@ function convertToFahrenheit(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-
 function convertToCelsius(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
@@ -156,7 +156,6 @@ function convertToCelsius(event) {
   let temperatureElement = document.querySelector(".temp");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
-
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
