@@ -170,13 +170,13 @@ function currentLocation(position) {
   let longitude = position.coords.longitude;
   let key = "baad171896e0c3b36f831a6990f30812";
   let units = "metric";
-  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=${units}`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?
+  lat=${latitude}&lon=${longitude}&appid=${key}&units=${units}`;
   axios.get(url).then(displayWeather);
 }
 
 function getCurrentPosition(event) {
   event.preventDefault();
-  //console.log(navigator.geolocation.getCurrentPosition(currentLocation));
   navigator.geolocation.getCurrentPosition(currentLocation);
 }
 

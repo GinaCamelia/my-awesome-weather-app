@@ -4,7 +4,7 @@ body {
 }
 .border {
   background: linear-gradient(76.5deg, rgb(129, 252, 255) 0.4%, rgb(255, 175, 207) 49.8%, rgb(255, 208, 153) 98.6%);
-  max-width: 700px;
+  max-width: 600px;
   margin: 30px auto;
   border: 2px solid #D9D9D9;
   border-radius: 16px;
