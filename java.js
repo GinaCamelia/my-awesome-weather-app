@@ -91,7 +91,6 @@ lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
 console.log(apiUrl);
 
 axios.get(apiUrl).then(displayForecast);
-
 }
 
 
@@ -193,4 +192,3 @@ function getCurrentPosition(event) {
 
 let button = document.querySelector(".btn-light");
 button.addEventListener("click", getCurrentPosition);
-
