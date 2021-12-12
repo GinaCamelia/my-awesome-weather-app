@@ -9,13 +9,13 @@ if (minutes < 10) {
 }
 
 let days = [
-  "Sun",
-  "Mon",
-  "Tue",
-  "Wed",
-  "Thur",
-  "Fri",
-  "Sat"
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thurday",
+  "Friday",
+  "Saturday"
 ];
 
 let day = days[now.getDay()];
@@ -38,7 +38,7 @@ let date = now.getDate();
 let year = now.getFullYear();
 
 let dateElement = document.querySelector(".day");
-dateElement.innerHTML = `${day}, ${month} ${date}, ${year}; ${hours}:${minutes}`;
+dateElement.innerHTML = `${day}, ${month}-${date}; ${hours}:${minutes}`;
 
 function formatDay(timestamp) {
 
@@ -58,11 +58,10 @@ let forecastElement = document.querySelector("#forecast");
 
 let forecastHTML = `<div class="row">`;
 forecast.forEach(function(forecastDay, index) {
-  if (index < 6) {
+  if (index > 0 && index < 6) {
   forecastHTML = forecastHTML + 
   `
-  <div class="col-2">
-  <div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="col">
      <div class="card-header">${formatDay(forecastDay.dt)}</div>
         <div class="card-body">
         <img src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
@@ -70,11 +69,10 @@ forecast.forEach(function(forecastDay, index) {
         width="48"
         />
         <div class="card-text">
-          <span class="temp-min">${Math.round(forecastDay.temp.max)}°</span>
-          <span class="temp-max">${Math.round(forecastDay.temp.min)}°</span>
+          <span class="temp-min">${Math.round(forecastDay.temp.max)}° </span>
+          <span class="temp-max">${Math.round(forecastDay.temp.min)}° </span>
         </div>
       </div>
-    </div>
   </div>
   `;
   }
@@ -125,8 +123,7 @@ function displayWeather(response) {
   let maxTemp = `${Math.round(response.data.main.temp_max)}`;
   let showMax = document.querySelector(".feels-like");
   showMax.innerHTML = `${maxTemp}°`;
-  
-getForecast(response.data.coord);
+  getForecast(response.data.coord);
 }
 
 function displayCity(city) {
@@ -141,6 +138,8 @@ function displayCity(city) {
     alert("Enter a city");
   }
 }
+
+
 function handleSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-text-input");

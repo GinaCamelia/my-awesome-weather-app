@@ -97,18 +97,23 @@ body {
   text-align: center;
 }
 .card-header {
-font-size: 15px;  
+font-size: 15px; 
+text-align: center; 
 }
 .card-text {
-  font-size: 13px;
+  font-size: 14px;
+  text-align: center;
+}
+img {
+  display: block;
+  margin: 0 auto;
 }
 .temp-max {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 .city {
   font-size: 22px;
   font-weight: 400;
-  text-align: center;
 }
 .temp {
   font-size: 40px;
@@ -117,10 +122,9 @@ font-size: 15px;
   margin-top: 6px;
   padding-left: 6px;
   vertical-align: top;
-  text-align: center;
 }
 .units {
   line-height: 24px;
   vertical-align: top;
-  text-align: center;
+  font-size: 20px;
 }
