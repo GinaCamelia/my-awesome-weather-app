@@ -93,15 +93,6 @@ body {
   text-align: center;
   margin-top: 10px;
 }
-.active {
-  color: #212529;
-  cursor: default;
-  text-decoration: none;
-}
-.active:hover {
-  text-decoration: none;
-  cursor: default;
-}
 .border-info {
   text-align: center;
 }
@@ -130,8 +121,6 @@ font-size: 15px;
 }
 .units {
   line-height: 24px;
-  margin-top: 6px;
-  padding-left: 6px;
   vertical-align: top;
   text-align: center;
 }

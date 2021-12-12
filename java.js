@@ -62,7 +62,7 @@ forecast.forEach(function(forecastDay, index) {
   forecastHTML = forecastHTML + 
   `
   <div class="col-2">
-   <div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card border-info mb-3" style="max-width: 18rem;">
      <div class="card-header">${formatDay(forecastDay.dt)}</div>
         <div class="card-body">
         <img src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
@@ -148,30 +148,6 @@ function handleSubmit(event) {
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let temperatureElement = document.querySelector(".temp");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector(".temp");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
 
 
 function currentLocation(position) {
