@@ -43,6 +43,10 @@ body {
 .display-input strong {
   font-size: 10px;
 }
+.container {
+  display: flex;
+  flex: 1;
+}
 .circle {
   position: relative;
   left: 55px;
